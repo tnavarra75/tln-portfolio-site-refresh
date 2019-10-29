@@ -1,0 +1,140 @@
+section.skills {
+  .caption {
+    padding: 0 0 20px;
+  }
+
+  .skills-list-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+
+    @media screen and (min-width: $medium-2) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 690px;
+    }
+
+    .skills-list-code-container,
+    .skills-list-visual-container {
+      width: 100%;
+      margin: 0 auto 40px;
+
+      @media screen and (min-width: $medium-2) {
+        width: 40%;
+      }
+    }
+
+    .fa-eye {
+      color: rgba($blue-gray-text, .4);
+      @include fontSize(26);
+      padding-bottom: 10px;
+
+      @media screen and (min-width: $medium) {
+        @include fontSize(30);
+      }
+    }
+
+    li {
+      @include fontSize(14);
+      padding-bottom: 10px;
+      text-align: left;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+
+      @media screen and (min-width: $medium) {
+        @include fontSize(16);
+        padding-bottom: 15px;
+
+      }
+    }
+
+    .code-symbol,
+    .visual-symbol {
+      height: 50px;
+    }
+
+    .code-symbol {
+      color: $blue-gray;
+      @include fontSize(26);
+      line-height: 1;
+    }
+
+    .skills-list-skill {
+      display: inline-block;
+      width: 90px;
+    }
+
+    .skills-level {
+      position: relative;
+      top: -4px;
+      display: inline-block;
+      width: calc(100% - 90px);
+      height: 1px;
+      background-color: $blue-green;
+
+      &::before {
+        position: absolute;
+        top: -5px;
+        right: 0;
+        content: '';
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #FFF;
+        border: 2px solid $blue-gray;
+        transition: 1s ease-out;
+      }
+
+      &.active::before {
+        transition: 1s ease-out;
+      }
+
+      &.illustrator.active::before {
+        right: 23%;
+      }
+
+      &.indesign.active::before {
+        right: 10%;
+      }
+
+      &.photoshop.active::before {
+        right: 19%;
+      }
+
+      &.sketch.active::before {
+        right: 70%;
+      }
+
+      &.vue.active::before {
+        right: 60%;
+      }
+
+      &.html.active::before {
+        right: 30px;
+      }
+
+      &.css.active::before {
+        right: 22%;
+      }
+
+      &.javascript.active::before {
+        right: 58%;
+      }
+
+      &.greensock.active::before {
+        right: 70%;
+      }
+
+      &.github.active::before {
+        right: 70%;
+      }
+    }
+  }
+
+  //end container
+}
+
+//end skills section

@@ -1,0 +1,60 @@
+footer {
+  overflow: hidden;
+  color: rgba($blue-gray-text, .6);
+  background-color: $dark-blue-gray;
+  border-top: 3px solid $blue-gray;
+  text-align: left;
+  padding: 20px 5%;
+
+  @media screen and (min-width: $medium) {
+    padding: 20px;
+  }
+
+  .footer-content {
+    position: relative;
+    text-align: left;
+    color: rgba(255, 255, 255, .6);
+
+    h1 {
+      color: rgba(255, 255, 255, .6);
+      @include fontSize(30);
+      font-family: 'Dynalight';
+      letter-spacing: .05em;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-family: 'Open Sans';
+      font-weight: 300;
+      @include fontSize(15);
+      padding-bottom: 20px;
+    }
+
+    @media screen and (min-width:  $medium-2) {
+      float: left;
+    }
+  }
+
+  .social-icons-container {
+    @media screen and (min-width: $medium) {
+      float: right;
+    }
+
+    a {
+      color: rgba(255, 255, 255, .6);
+      padding: 0 10px 0 0;
+
+      i {
+        @include fontSize(26);
+      }
+
+      @media screen and (min-width: $medium) {
+        padding: 0 0 0 10px;
+
+        i {
+          @include fontSize(30);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,228 @@
+// Layout
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+// * {
+//   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+//   -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+// }
+img,
+iframe {
+  vertical-align: middle;
+  border: none;
+}
+
+img,
+svg {
+  width: 100%;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+
+// Wrap stuff sometimes
+.container {
+  flex: 1 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+
+  @media screen and (min-width: $large) {
+    width: 80%;
+    margin: 0 5% 0 15%;
+  }
+
+  @media screen and (min-width: $xlarge) {
+    margin: 0 auto;
+  }
+}
+
+section {
+  padding: 30px 0;
+
+  @media screen and (min-width: $medium) {
+    padding: 50px 0;
+  }
+}
+
+/* OWL */
+
+.owl-carousel {
+  position: relative;
+}
+
+.owl-item {
+  border: 1px solid $blue-gray;
+}
+
+.owl-carousel .owl-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+
+.owl-stage {
+  margin: 0 auto;
+
+  .owl-item:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.owl-theme {
+  .owl-dots {
+    .owl-dot {
+      span {
+        width: 6px;
+        height: 6px;
+        background: rgba($blue-gray, .6);
+
+        @media screen and (min-width: $medium) {
+          width: 8px;
+          height: 8px;
+        }
+      }
+
+      .active {
+        background: $blue-gray;
+      }
+    }
+  }
+
+  .owl-nav {
+
+    .owl-prev,
+    .owl-next {
+      color: rgba($blue-gray, .5);
+      background: none;
+      @include fontSize(26);
+    }
+
+    .owl-prev:hover,
+    .owl-next:hover {
+      color: $blue-gray;
+      background: none;
+    }
+  }
+}
+
+.re-center {
+  transform: translateX(10px);
+}
+
+.gray-border {
+  border: 1px solid $blue-gray;
+}
+
+.social-icon {
+  color: rgba($blue-gray, .4);
+  @include fontSize(35);
+
+  @media screen and (min-width: $medium) {
+    @include fontSize(30);
+  }
+}
+
+section.intro .social-icon,
+footer .social-icon {
+  color: rgba(255, 255, 255, .3);
+}
+
+.contact-mobile-menu {
+  @include fontSize(14);
+  color: rgba(255, 255, 255, .4);
+  padding: 10px 0 10px;
+}
+
+.category {
+  display: inline-block;
+  background-color: #FFF;
+  font-weight: 300;
+  @include fontSize(24);
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 20px;
+
+  @media screen and (min-width: $medium) {
+    @include fontSize(28);
+  }
+}
+
+.strikethrough-container {
+  margin-bottom: 30px;
+}
+
+.strikethrough::before {
+  content: '';
+  border-bottom: 1px solid $blue-gray;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: -999;
+}
+
+.link-out {
+  color: $blue-green;
+}
+
+.caption {
+  @include fontSize(13);
+  font-style: italic;
+  line-height: 1.4;
+  padding: 8px 0 15px;
+
+  @media screen and (min-width: $medium) {
+    @include fontSize(14);
+    padding: 15px 0 20px;
+  }
+}
+
+.refresh-iframe-icon {
+  padding: 10px 0 0;
+
+  &:hover,
+  &:focus {
+    background: none;
+  }
+}
+
+// Hide stuff sometimes
+@media screen and (max-width: $medium - 1) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: $medium) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
